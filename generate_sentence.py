@@ -52,6 +52,5 @@ if __name__ == '__main__':
     sing_num = 1 | 2 | 3 | 4 
     op = + | - | * | /
     """
-    for i in range (100):
-        ic(gene('expression',parse_grammar(another_rule
-                                           )))
+    for i in range(100):
+        ic(gene('expression',parse_grammar(another_rule)))
