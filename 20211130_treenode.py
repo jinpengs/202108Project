@@ -75,6 +75,19 @@ in_order_traversal(root)
 print("后序遍历：")
 post_order_traversal(root)
 
+# 广度优先遍历：层序遍历
+from queue import Queue
 
-
+def level_order_traversal(node):
+    queue = Queue()
+    queue.put(node)
+    while not queue.empty():
+        node = queue.get()
+        print(node.data)
+        if node.left is not None:
+            queue.put(node.left)
+        if node.right is not None:
+            queue.put(node.right)
+print('层序遍历：')
+level_order_traversal(root)
 
