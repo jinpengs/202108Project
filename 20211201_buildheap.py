@@ -13,7 +13,8 @@ def up_adjust(array=[]):
     temp = array[child_index]
     while child_index > 0 and temp < array[parent_index]:
         # 无需真正交换，单向赋值即可
-        array[child_index] = parent_index
+        array[child_index] = array[parent_index]
+        child_index = parent_index
         parent_index = (parent_index - 1) // 2
     array[child_index] = temp
 
@@ -65,3 +66,10 @@ print(my_array)
 build_heap(my_array)
 print("build_heap:")
 print(my_array)
+
+
+a = [1,2,3]
+print(a[0],a[1])
+a[0] = a[1]
+
+print(a[0],a[1],a)
